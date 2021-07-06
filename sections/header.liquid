@@ -2,13 +2,14 @@
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
-
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 <noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
 
 <style>
+
   header-drawer {
     justify-self: start;
     margin-left: -1.2rem;
@@ -245,6 +246,12 @@
     {%- endif -%}
 
     <div class="header__icons">
+
+      <a href="{{ settings.github_profile_link }}" class="header__icon header__icon--cart link link--text focus-inset" id="cart-icon-bubble">
+        {%- render 'github-icon-dark' -%}
+        <span class="visually-hidden">GitHub icon</span>
+      </a>
+
       {%- if request.page_type != 'index' -%}
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link link--text focus-inset" id="cart-icon-bubble">
         {%- liquid
@@ -265,17 +272,8 @@
         {%- endif -%}
       </a>
       {%- endif -%}
-      
-      <a href="{{ settings.github_profile_link }}" class="header__icon header__icon--cart link link--text focus-inset" id="cart-icon-bubble">
-        {%- liquid
-          if settings.theme_vibe == 'light'
-            render 'github-icon-dark'
-          else
-            render 'github-icon-light'
-          endif
-        -%}
-        <span class="visually-hidden">GitHub icon</span>
-      </a>
+
+      <i class="uil uil-moonset change-theme" id="change-theme"></i>
 
     </div>
   </header>
