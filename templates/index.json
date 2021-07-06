@@ -31,12 +31,22 @@
             "button_2": "Button label",
             "button_link2": ""
           }
+        },
+        "image_slide_3": {
+          "type": "image",
+          "settings": {
+            "button__label1": "Button label",
+            "button_url_1": "",
+            "button__label2": "Button label",
+            "button_url_2": ""
+          }
         }
       },
       "block_order": [
         "image_slide_1",
         "image_slide_2",
-        "product_slide_1"
+        "product_slide_1",
+        "image_slide_3"
       ],
       "settings": {
       }
