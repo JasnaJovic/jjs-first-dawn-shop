@@ -1,4 +1,42 @@
 {
   "current": {
+    "github_profile_link": "https:\/\/github.com\/JasnaJovic",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo_width": 100,
+          "logo_position": "top-center",
+          "menu": "main-menu",
+          "github_link": "",
+          "show_line_separator": true,
+          "enable_sticky_header": false
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0"
+        ],
+        "settings": {
+          "contact_form_enable": true,
+          "contact_form_heading": "get in touch",
+          "github_enable": true,
+          "github_url": ""
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   }
 }
