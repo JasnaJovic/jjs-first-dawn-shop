@@ -4,8 +4,8 @@
     "theme_name": "Jasna's Dawn",
     "theme_version": "1.0.0",
     "theme_author": "Jasna",
-    "theme_documentation_url": "https://shopify.dev/themes/tools/dawn",
-    "theme_support_url": "https://support.shopify.com/"
+    "theme_documentation_url": "https:\/\/shopify.dev\/themes\/tools\/dawn",
+    "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
     "name": "t:settings_schema.colors.name",

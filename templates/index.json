@@ -1,3 +1,48 @@
 {
-  "sections": {}
+  "sections": {
+    "16255736140b2036b1": {
+      "type": "main-featured-slider",
+      "blocks": {
+        "16255736140b2036b1-0": {
+          "type": "image",
+          "settings": {
+            "button__label1": "Button label",
+            "button_url_1": "",
+            "button__label2": "Button label",
+            "button_url_2": ""
+          }
+        },
+        "16255736140b2036b1-1": {
+          "type": "image",
+          "settings": {
+            "button__label1": "Button label",
+            "button_url_1": "",
+            "button__label2": "Button label",
+            "button_url_2": ""
+          }
+        },
+        "16255736140b2036b1-2": {
+          "type": "featured-product",
+          "settings": {
+            "product": "",
+            "use_product_image": true,
+            "button_1": "Button label",
+            "button_link1": "",
+            "button_2": "Button label",
+            "button_link2": ""
+          }
+        }
+      },
+      "block_order": [
+        "16255736140b2036b1-0",
+        "16255736140b2036b1-1",
+        "16255736140b2036b1-2"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "16255736140b2036b1"
+  ]
 }
