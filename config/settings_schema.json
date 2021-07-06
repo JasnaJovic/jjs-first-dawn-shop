@@ -20,6 +20,39 @@
         "default": "#FFFFFF",
         "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label",
         "info": "t:settings_schema.colors.settings.colors_solid_button_labels.info"
+      },
+      {
+        "type": "header",
+        "content": "Theme vibe?"
+      },
+      {
+        "type": "select",
+        "id": "theme_vibe",
+        "default": "light",
+        "options": [
+          {
+            "value": "light",
+            "label": "Default theme vibe - Light"
+          },
+          {
+            "value": "dark",
+            "label": "Theme vibe - Dark"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Links",
+    "settings": [
+      {
+        "type": "header",
+        "content": "GitHub profile link"
+      },
+      {
+        "type": "url",
+        "id": "github_profile_link",
+        "label": "Link your GitHub profile with your store!"
       }
     ]
   }
