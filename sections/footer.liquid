@@ -1,4 +1,5 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
 
 <footer class="footer color-{{ section.settings.color_scheme }}">
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable -%}
@@ -43,51 +44,80 @@
         </div>
       {%- endif -%}
 
-      <div class="footer-block--newsletter">
-        {%- if section.settings.newsletter_enable -%}
-          <div class="footer-block__newsletter">
+      <div class="footer-block--contact_form">
+        {%- if section.settings.contact_form_enable -%}
+          <div class="footer-block__contact_form">
             {%- if section.settings.newsletter_heading != blank -%}
-              <h2 class="footer-block__heading">{{ section.settings.newsletter_heading | escape }}</h2>
+              <h2 class="footer-block__heading">{{ section.settings.contact_form_heading | escape }}</h2>
             {%- endif -%}
-            {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
-              <input type="hidden" name="contact[tags]" value="newsletter">
-              <div class="newsletter-form__field-wrapper">
-                <div class="field">
-                  <input
-                    id="NewsletterForm--{{ section.id }}"
-                    type="email"
-                    name="contact[email]"
-                    class="field__input"
-                    value="{{ form.email }}"
-                    aria-required="true"
-                    autocorrect="off"
-                    autocapitalize="off"
-                    autocomplete="email"
-                    {% if form.errors %}
-                      autofocus
-                      aria-invalid="true"
-                      aria-describedby="ContactFooter-error"
-                    {% elsif form.posted_successfully? %}
-                      aria-describedby="ContactFooter-success"
-                    {% endif %}
-                    placeholder="{{ 'newsletter.label' | t }}"
-                    required
-                  >
-                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                    {{ 'newsletter.label' | t }}
-                  </label>
-                </div>
-                {%- if form.errors -%}
-                  <small class="newsletter-form__message form__message" id="ContactFooter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
-                {%- endif -%}
-              </div>
-              <button type="submit" class="button button--secondary newsletter-form__button" name="commit" id="Subscribe">
-                {{ 'newsletter.button_label' | t }}
-              </button>
-              {%- if form.posted_successfully? -%}
-                <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
-              {%- endif -%}
-            {%- endform -%}
+            {%- form 'contact', id: 'ContactForm' -%}
+    {%- if form.posted_successfully? -%}
+      <div class="form-status form-status-list form__message" tabindex="-1" autofocus>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</div>
+    {%- elsif form.errors -%}
+      <div class="form__message">
+        <h2 class="form-status caption-large" role="alert" tabindex="-1" autofocus>{% render 'icon-error' %} {{ 'templates.contact.form.error_heading' | t }}</h2>
+      </div>
+      <ul class="form-status-list caption-large" role="list">
+        <li>
+          <a href="#ContactForm-email" class="link">
+            {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
+          </a>
+        </li>
+      </ul>
+    {%- endif -%}
+    <div class="contact__fields">
+      <div class="field">
+        <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}">
+        <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
+      </div>
+      <div class="field field--with-error">
+        <input
+          autocomplete="email"
+          type="email"
+          id="ContactForm-email"
+          class="field__input"
+          name="contact[email]"
+          spellcheck="false"
+          autocapitalize="off"
+          value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+          aria-required="true"
+          {% if form.errors contains 'email' %}
+            aria-invalid="true"
+            aria-describedby="ContactForm-email-error"
+          {% endif %}
+          placeholder="{{ 'templates.contact.form.email' | t }}"
+        >
+        <label class="field__label" for="ContactForm-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+        {%- if form.errors contains 'email' -%}
+          <small class="contact__field-error" id="ContactForm-email-error">
+            <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+            <span class="form__message">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
+          </small>
+        {%- endif -%}
+      </div>
+    </div>
+    <div class="field">
+      <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[{{ 'templates.contact.form.phone' | t }}]" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ 'templates.contact.form.phone' | t }}">
+      <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+    </div>
+    <div class="field">
+      <textarea
+        rows="10"
+        id="ContactForm-body"
+        class="text-area field__input"
+        name="contact[{{ 'templates.contact.form.comment' | t }}]"
+        placeholder="{{ 'templates.contact.form.comment' | t }}"
+      >
+        {{- form.body -}}
+      </textarea>
+      <label class="form__label field__label" for="ContactForm-body">{{ 'templates.contact.form.comment' | t }}</label>
+    </div>
+    <div class="contact__button">
+      <button type="submit" class="button">
+        {{ 'templates.contact.form.send' | t }}
+      </button>
+    </div>
+  {%- endform -%}
           </div>
         {%- endif -%}
       </div>
@@ -154,14 +184,14 @@
   "settings": [
     {
       "type": "checkbox",
-      "id": "newsletter_enable",
+      "id": "contact_form_enable",
       "default": true,
       "label": "t:sections.footer.settings.newsletter_enable.label"
     },
     {
       "type": "text",
-      "id": "newsletter_heading",
-      "default": "Sign up to our emails",
+      "id": "contact_form_heading",
+      "default": "get in touch",
       "label": "t:sections.footer.settings.newsletter_heading.label"
     },
     {
