@@ -1,3 +1,8 @@
-
+.footer-contact__fields {
+  display: flex;
+}
+.footer-contact__fields .field {
+  width: 50%;
+}
 
 /*# sourceMappingURL=section-footer.css.map */

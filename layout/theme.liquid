@@ -7,7 +7,9 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     {%- unless settings.type_header_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
@@ -96,6 +98,7 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'basic-styles.css' | asset_url | stylesheet_tag }}   
     {{ 'responsive.css' | asset_url | stylesheet_tag }}
     {{ 'theme-change.css' | asset_url | stylesheet_tag }}
     {{ 'theme-light.css' | asset_url | stylesheet_tag }}
