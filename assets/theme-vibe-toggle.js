@@ -18,7 +18,7 @@
 		$('head').append('<link href="/assets/theme-dark.css?v=12966452138792579536" rel="stylesheet" type="text/css" media="all">');	
 		setTimeout(function () {
 		$('head link[href*="-light"]').remove();
-		}, 500)
+		}, 150)
 		// 2. update dark mode in local storage
 		localStorage.setItem('darkMode', 'enabled');
 	};
@@ -35,7 +35,7 @@
 		$('head').append('<link href="/assets/theme-light.css?v=4954933951495250391" rel="stylesheet" type="text/css" media="all">');
 		setTimeout(function () {
 			$('head link[href*="-dark"]').remove();
-		}, 500)
+		}, 150)
 		// 2. update dark mode in local storage
 		localStorage.setItem('darkMode', null);
 	};
