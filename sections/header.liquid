@@ -270,10 +270,13 @@
             <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
           </div>
         {%- endif -%}
-      </a>
+      </a> 
       {%- endif -%}
 
-      <i class="uil uil-moonset change-theme" id="change-theme"></i>
+      <label class="theme-switch">
+        <input onchange="switchMode(this)" type="checkbox" class="theme-switch__input">
+        <span class="theme-switch--round"></span>
+      </label>
 
     </div>
   </header>
