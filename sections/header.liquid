@@ -175,7 +175,7 @@
         </details>
       </header-drawer>
 
-      <div class="demo-color-toggle mobile">
+      <div class="demo-color-toggle">
         <span class="dark-theme-icon">
           {% render 'moon'%} 
         </span>
@@ -188,7 +188,7 @@
     {%- if request.page_type == 'index' -%}
       <h1 class="header__heading">
     {%- endif -%}
-        <a style="width: 100%" href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+        <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
             {% render 'logo' %}
         </a>
     {%- if request.page_type == 'index' -%}
@@ -249,9 +249,7 @@
 
     <div class="header__icons">
 
-      <a href="{{ settings.github_profile_link }}" class="header__icon header__icon--cart link link--text focus-inset" style="
-      margin-right: -1.2rem;
-  ">
+      <a href="{{ settings.github_profile_link }}" class="header__icon header__icon--cart link link--text focus-inset git-icon">
         {%- render 'github-icon' -%}
         <span class="visually-hidden">GitHub icon</span>
       </a>
@@ -282,14 +280,7 @@
         <span class="theme-switch--round"></span>
       </label> -->
 
-      <div class="demo-color-toggle desktop">
-        <span class="dark-theme-icon">
-          {% render 'moon'%} 
-        </span>
-        <span class="light-theme-icon">
-          {% render 'sun'%} 
-        </span>
-      </div>
+      
 
     </div>
   </header>

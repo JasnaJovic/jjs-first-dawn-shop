@@ -1694,12 +1694,6 @@ input[type='checkbox'] {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.header--middle-center {
-  grid-template-areas:
-    'navigation heading icons moon';
-    grid-template-columns: 1fr 2fr 0.5fr 0.5fr;
-    column-gap: 2rem;
-}
 
 @media screen and (min-width: 990px) {
   .header {
@@ -1766,10 +1760,12 @@ input[type='checkbox'] {
 .header__heading-link {
   grid-area: heading;
   justify-self: center;
+  display: flex;
+  justify-content: center;
 }
 
 .header__heading-link {
-  display: inline-block;
+  display: flex;
   /*padding: 0.75rem;*/
   text-decoration: none;
   word-break: break-word;
@@ -1796,7 +1792,9 @@ input[type='checkbox'] {
 
   .header__heading,
   .header__heading-link {
-    justify-self: start;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
   }
 
   .header--top-center .header__heading-link,

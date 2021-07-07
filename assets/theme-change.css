@@ -1,12 +1,24 @@
 .demo-color-toggle {
   z-index: 165;
   display: -ms-flexbox;
-  display: inline-block;
-  justify-content: center;
+  justify-self: flex-start;
   align-items: center;
   width: fit-content;
   margin-left: -1.8rem;
 }
+.git-icon {
+  margin-right: -1.2rem;
+}
+@media (min-width: 990px) {
+  .demo-color-toggle {
+    justify-self: flex-end;
+  }
+  .git-icon {
+    margin: 0;
+  }
+}
+
+
 
 .demo-color-toggle > span {
   display: -ms-flexbox;

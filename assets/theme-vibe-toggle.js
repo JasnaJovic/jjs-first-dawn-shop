@@ -1,5 +1,4 @@
 // using local storage
-
 	let darkMode = localStorage.getItem('darkMode');	
 	const darkModeToggle = document.querySelector('.demo-color-toggle');
 	const darkThemeIcon = document.querySelector('.dark-theme-icon');
