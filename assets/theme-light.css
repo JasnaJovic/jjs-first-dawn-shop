@@ -1,5 +1,5 @@
-.demo-color-toggle:hover {
-  background-color: #f5f5f5 !important;
+:root {
+  --logo-color: rgb(1, 85, 85);
 }
 
 body.light-mode {

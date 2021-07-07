@@ -75,15 +75,20 @@
 </svg>
 <{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   <header class="header header--{{ section.settings.logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}">
-    {%- if section.settings.menu != blank -%}
+    {%- if section.settings.menu != blank -%} 
+    
       <header-drawer>
         <details class="menu-drawer-container">
           <summary class="header__icon header__icon--menu header__icon--summary link link--text focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
             <span>
               {% render 'icon-hamburger' %}
               {% render 'icon-close' %}
+              
             </span>
+            
+            
           </summary>
+          
           <div id="menu-drawer" class="menu-drawer motion-reduce" tabindex="-1">
             <div class="menu-drawer__inner-container">
               <div class="menu-drawer__navigation-container">
@@ -169,25 +174,22 @@
           </div>
         </details>
       </header-drawer>
+
+      <div class="demo-color-toggle mobile">
+        <span class="dark-theme-icon">
+          {% render 'moon'%} 
+        </span>
+        <span class="light-theme-icon">
+          {% render 'sun'%} 
+        </span>
+      </div>
     {%- endif -%}
 
     {%- if request.page_type == 'index' -%}
       <h1 class="header__heading">
     {%- endif -%}
-        <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-          {%- if section.settings.logo != blank -%}
-            {%- assign image_size = section.settings.logo_width | append: 'x' -%}
-            <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
-              src="{{ section.settings.logo | img_url: image_size }}"
-              loading="lazy"
-              class="header__heading-logo"
-              width="{{ section.settings.logo.width }}"
-              height="{{ section.settings.logo.height }}"
-              alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
-            >
-          {%- else -%}
-            <span class="h2">{{ shop.name }}</span>
-          {%- endif -%}
+        <a style="width: 100%" href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+            {% render 'logo' %}
         </a>
     {%- if request.page_type == 'index' -%}
       </h1>
@@ -247,8 +249,10 @@
 
     <div class="header__icons">
 
-      <a href="{{ settings.github_profile_link }}" class="header__icon header__icon--cart link link--text focus-inset" id="cart-icon-bubble">
-        {%- render 'github-icon-dark' -%}
+      <a href="{{ settings.github_profile_link }}" class="header__icon header__icon--cart link link--text focus-inset" style="
+      margin-right: -1.2rem;
+  ">
+        {%- render 'github-icon' -%}
         <span class="visually-hidden">GitHub icon</span>
       </a>
 
@@ -278,7 +282,7 @@
         <span class="theme-switch--round"></span>
       </label> -->
 
-      <div class="demo-color-toggle ">
+      <div class="demo-color-toggle desktop">
         <span class="dark-theme-icon">
           {% render 'moon'%} 
         </span>
@@ -448,10 +452,10 @@
         },
         {
           "value": "middle-center",
-          "label": "Logo center - navigation left"
+          "label": "t:sections.header.settings.logo_position.options__3.label"
         }
       ],
-      "default": "top-center",
+      "default": "middle-center",
       "label": "t:sections.header.settings.logo_position.label"
     },
     {

@@ -2,10 +2,10 @@
 .demo-color-toggle {
     z-index: 165;
     display: -ms-flexbox;
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
-    margin-left: 10px;
+    width: fit-content;
 }
 
 .demo-color-toggle > span {
@@ -17,7 +17,7 @@
     position: relative;
     width: 36px;
     height: 36px;
-    padding: 0;
+    padding: 4px;
     font-size: 11px;
     line-height: 18px;
     font-weight: bold;
@@ -25,3 +25,19 @@
     cursor: pointer;
     transition: .2s;
 }
+
+@media (min-width: 990px){
+
+.mobile {
+    display: none;
+}
+
+}
+
+@media (max-width: 990px){
+
+    .desktop {
+        display: none;
+    }
+    
+    }
