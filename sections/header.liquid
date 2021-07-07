@@ -273,10 +273,19 @@
       </a> 
       {%- endif -%}
 
-      <label class="theme-switch">
+      <!-- <label class="theme-switch">
         <input onchange="switchMode(this)" type="checkbox" class="theme-switch__input">
         <span class="theme-switch--round"></span>
-      </label>
+      </label> -->
+
+      <div class="demo-color-toggle ">
+        <span class="dark-theme-icon">
+          {% render 'moon'%} 
+        </span>
+        <span class="light-theme-icon">
+          {% render 'sun'%} 
+        </span>
+      </div>
 
     </div>
   </header>
