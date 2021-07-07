@@ -6,7 +6,7 @@
         "type": "header",
         "settings": {
           "logo_width": 100,
-          "logo_position": "top-center",
+          "logo_position": "middle-center",
           "menu": "main-menu",
           "github_link": "",
           "show_line_separator": true,
