@@ -1,5 +1,11 @@
 /* Derived from base colors (theme settings) */
-
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+-ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 :root,
 .color-background-1 {
   --color-foreground: var(--color-base-text);
