@@ -260,10 +260,6 @@
     padding-bottom: 2rem;
   }
 
-  .header--has-menu:not(.header--middle-left) {
-    padding-bottom: 0;
-  }
-
   .header--top-left {
     grid-template-areas: "navigation heading icons moon";
     grid-template-columns: 1fr 2fr 0.5fr 0.5fr;

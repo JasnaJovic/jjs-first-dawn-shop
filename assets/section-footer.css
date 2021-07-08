@@ -1,9 +1,9 @@
 .footer {
   width: 100%;
-  background-color: var(--footer-background);
 }
 .footer__content-top {
-  margin: 30px auto;
+  background-color: var(--footer-background);
+  margin: 30px auto 0;
 }
 .footer-block__contact_form {
   padding: 20px 0;
@@ -43,7 +43,7 @@
   background: var(--accent-color);
   text-transform: lowercase;
   font-size: 2rem;
-  color: var(--footer-heading__fields);
+  color: var(--accent-font-color);
   font-weight: 700;
   border-radius: 12px;
   width: 100%;
@@ -64,10 +64,14 @@
 }
 .footer__content-bottom {
   display: flex;
-  background-color: var(--body-background);
+  width: 100%;
 }
 .footer__content-bottom-wrapper {
-  margin: 10px auto;
+  background-color: var(--body-background);
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .footer__copyright {
   font-size: 1.2rem;

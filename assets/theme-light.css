@@ -1,11 +1,12 @@
 :root {
-  --body-background: rgb(230, 230, 230);
-  --header-background-color-70: rgba(230, 230, 230, 0.7);
+  --body-background: rgb(243, 243, 243);
+  --header-background-color-70: rgba(255, 255, 255, 0.7);
   --header-accent-color: rgb(3, 3, 39);
-  --menu-drawer-background: rgb(247, 245, 245);
+  --menu-drawer-background: rgb(255, 255, 255);
   --menu-drawer-cell-background: rgb(226, 225, 225);
-  --accent-color: rgb(25, 25, 66);
-  --accent-color-hover: rgb(11, 11, 54);
+  --accent-color: rgb(19, 19, 68);
+  --accent-font-color: rgb(255, 255, 255);
+  --accent-color-hover: rgb(6, 6, 95);
   --footer-background: rgb(231, 230, 230);
   --footer-heading__fields: white;
   --footer-light-text-tshadow:lightgrey;
@@ -17,7 +18,6 @@
 
 body {
   background: url("/assets/pattern-tile-light.svg"), var(--body-background);
-  z-index: 5;
 }
 
 /*# sourceMappingURL=theme-light.css.map */

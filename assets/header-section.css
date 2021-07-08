@@ -37,12 +37,8 @@
 
 @media screen and (min-width: 990px) {
   .header {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .header--has-menu:not(.header--middle-left) {
-    padding-bottom: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .header--top-left {

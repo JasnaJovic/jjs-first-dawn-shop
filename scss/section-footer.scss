@@ -1,11 +1,12 @@
 .footer {
     //margin: 0 auto;
     width: 100%;
-    background-color: var(--footer-background);
+    
     
     // footer styles - small contact form
     &__content-top {
-        margin: 30px auto;
+        background-color: var(--footer-background);
+        margin: 30px auto 0;
     }
     &-block {
         &__contact_form {
@@ -50,7 +51,7 @@
            background: var(--accent-color);
            text-transform: lowercase;
            font-size: 2rem; 
-           color: var(--footer-heading__fields);
+           color: var(--accent-font-color);
            font-weight: 700;
            border-radius: 12px;
            width: 100%;
@@ -78,9 +79,14 @@
     //copyright styles
     &__content-bottom {
         display: flex;
-        background-color: var(--body-background);
+        width: 100%;
+        
             &-wrapper {
-                margin: 10px auto;
+                background-color: var(--body-background);
+                padding: 10px;
+                width: 100%;
+                display: flex; 
+                justify-content: center;              
             }        
     }
     &__copyright {
