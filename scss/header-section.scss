@@ -35,6 +35,11 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
+
+  .demo-color-toggle {
+    grid-area: moon;
+    justify-self: flex-start;
+  }
   
   @media screen and (min-width: 990px) {
     .header {
@@ -44,7 +49,7 @@
   
     .header--top-left {
       grid-template-areas:
-        'navigation heading icons moon';
+      "navigation heading  moon icons";
       grid-template-columns: 1fr 2fr 0.5fr 0.5fr;
     }
   
@@ -72,6 +77,10 @@
     .header:not(.header--middle-left) .header__inline-menu {
       margin-top: 1.05rem;
     }
+
+    .demo-color-toggle {
+      justify-self: flex-end;
+    }
   }
   
   .header *[tabindex='-1']:focus {
@@ -82,11 +91,6 @@
     margin: 0;
     line-height: 0;
     width: 100%;
-  }
-  
-  .demo-color-toggle {
-    grid-area: moon;
-    justify-self: center;
   }
   
   .header > .header__heading-link {

@@ -102,6 +102,103 @@
 
 }
 
+@media (min-width: 990px){
+    .footer {
+        // //margin: 0 auto;
+        // width: 100%;
+        
+        
+        // // footer styles - small contact form
+        // &__content-top {
+        //     background-color: var(--footer-background);
+        //     margin: 30px auto 0;
+        // }
+        &-block {
+            &__contact_form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .contact-form {
+                width: 55%;
+            }
+            }
+            &__heading {
+                font-size: 11rem;
+                line-height: 0.8;
+                width: 42%;
+                margin: 0;
+            }
+        }
+        // &-contact__fields {
+        //     display: flex;
+        //     justify-content: space-between;
+        //     padding-bottom: min(2%,10px);
+    
+        //     .field {
+        //         width: 49%;
+        //     }
+        // }
+    
+        // .field {
+        //     background: var(--footer-heading__fields);
+        //     border-radius: 12px;
+    
+        //     label {
+        //         color: var(--footer-labels);
+        //         text-transform: lowercase;
+        //     }
+        //     input, textarea {
+        //         color: var(--footer-text);
+        //     }
+        // }
+        .contact__button {
+            margin: min(5%,20px) 0 0;
+        }
+    
+        // .form{
+        //     &__message {
+        //     align-items: center;
+        //     display: flex;
+        //     font-size: 1.6rem;
+        //     line-height: 1;
+        //     margin-top: 1rem;
+        //     }
+        //     &-status-list {
+        //         padding: 0;
+        //         margin: 2rem 0 2rem;
+        //     }     
+        // }
+    
+    
+        // //copyright styles
+        // &__content-bottom {
+        //     display: flex;
+        //     width: 100%;
+            
+        //         &-wrapper {
+        //             background-color: var(--body-background);
+        //             padding: 10px;
+        //             width: 100%;
+        //             display: flex; 
+        //             justify-content: center;              
+        //         }        
+        // }
+        // &__copyright {
+        //     font-size: 1.2rem;
+        //     color: var(--footer-copy-text);
+    
+        //     .copyright__content a {
+        //         text-decoration: none;
+        //         color: var(--footer-copy-text);
+        //     }
+        // }
+    
+    
+    } 
+    
+}
+
 
    
   

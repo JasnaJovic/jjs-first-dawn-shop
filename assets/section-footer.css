@@ -82,4 +82,24 @@
   color: var(--footer-copy-text);
 }
 
+@media (min-width: 990px) {
+  .footer-block__contact_form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-block__contact_form .contact-form {
+    width: 55%;
+  }
+  .footer-block__heading {
+    font-size: 11rem;
+    line-height: 0.8;
+    width: 42%;
+    margin: 0;
+  }
+  .footer .contact__button {
+    margin: min(5%, 20px) 0 0;
+  }
+}
+
 /*# sourceMappingURL=section-footer.css.map */
