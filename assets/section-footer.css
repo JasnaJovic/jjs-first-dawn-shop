@@ -1,8 +1,50 @@
+.footer {
+  background-color: #f0efef;
+}
+.footer__content-top {
+  margin: 30px 0;
+}
+.footer-block__contact_form {
+  padding: 20px 0;
+}
 .footer-contact__fields {
   display: flex;
+  justify-content: space-between;
+  padding-bottom: min(2%, 10px);
 }
 .footer-contact__fields .field {
-  width: 50%;
+  width: 49%;
+}
+.footer .field {
+  background: white;
+  border-radius: 12px;
+}
+.footer .field label {
+  color: darkgray;
+  text-transform: lowercase;
+}
+.footer .contact__button {
+  padding: min(5%, 30px) 0;
+}
+.footer .contact__button button {
+  background: var(--logo-color);
+  text-transform: lowercase;
+  font-size: 2rem;
+  color: white;
+  font-weight: 700;
+  border-radius: 12px;
+  width: 100%;
+}
+.footer__content-bottom {
+  display: flex;
+}
+.footer__copyright {
+  font-size: 1.2rem;
+  color: darkgray;
+}
+.footer__copyright .copyright__content a {
+  text-decoration: none;
+  color: darkgray;
 }
 
 /*# sourceMappingURL=section-footer.css.map */

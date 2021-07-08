@@ -1,15 +1,13 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
 {{ 'section-footer.css' | asset_url | stylesheet_tag }}
 
-<footer class="footer color-{{ section.settings.color_scheme }}">
+<footer class="footer">
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable -%}
     <div class="footer__content-top page-width">
       <div class="footer-block--contact_form">
         {%- if section.settings.contact_form_enable -%}
         <div class="footer-block__contact_form">
-          {%- if section.settings.newsletter_heading != blank -%}
           <h2 class="footer-block__heading">{{ section.settings.contact_form_heading | escape }}</h2>
-          {%- endif -%}
             {%- form 'contact', id: 'ContactForm' -%}
             {%- if form.posted_successfully? -%}
             <div class="form-status form-status-list form__message" tabindex="-1" autofocus>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</div>

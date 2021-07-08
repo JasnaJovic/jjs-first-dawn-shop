@@ -1,8 +1,63 @@
-.footer-contact__fields {
-    display: flex;
+.footer {
+    background-color: rgb(240, 239, 239);
+
+
+    // footer styles - small contact form
+    &__content-top {
+        margin: 30px 0;
+    }
+    &-block__contact_form {
+        padding: 20px 0;
+    }
+    &-contact__fields {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: min(2%,10px);
+
+        .field {
+            width: 49%;
+        }
+    }
 
     .field {
-        width: 50%;
+        background: white;
+        border-radius: 12px;
+
+        label {
+            color: darkgray;
+            text-transform: lowercase;
+
+        }
     }
+    .contact__button {
+        padding: min(5%,30px) 0;
+        
+
+        button {
+           background: var(--logo-color);
+           text-transform: lowercase;
+           font-size: 2rem; 
+           color: white;
+           font-weight: 700;
+           border-radius: 12px;
+           width: 100%;
+        }
+    }
+
+    //copyright styles
+    &__content-bottom {
+    display: flex;
+    }
+    &__copyright {
+        font-size: 1.2rem;
+        color: darkgray;
+
+        .copyright__content a {
+            text-decoration: none;
+            color: darkgray;
+        }
+    }
+
+
 }
 
