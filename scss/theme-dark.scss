@@ -1,6 +1,8 @@
 :root {
     --body-background: rgb(39, 39, 39);
     --header-accent-color: rgb(230, 230, 230);
+    --menu-drawer-background: rgb(39, 39, 39);
+    --menu-drawer-cell-background: rgb(61, 61, 61);
     // footer colors
     --accent-color: rgb(236, 236, 243);
     --accent-color-hover: rgb(255, 255, 255);
@@ -12,6 +14,7 @@
     --footer-copy-background:rgb(66, 66, 66);
     --footer-copy-text:rgb(230, 230, 230);
 }
+
 body.dark-mode{
     background-color: var(--body-background);
 }
