@@ -303,7 +303,7 @@ h6:empty {
 }
 
 .link--text {
-  color: var(--logo-color);
+  color: var(--header-accent-color);
 }
 
 .link-with-icon {

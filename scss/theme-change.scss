@@ -8,6 +8,22 @@
     width: fit-content;
 }
 
+.demo-color-toggle:hover {
+    svg {
+        animation: rotateScaleSVG 0.5s alternate infinite linear;
+    }
+}
+
+@keyframes rotateScaleSVG {
+    0% {
+        transform: rotate(0deg) scale(100%,100%);
+    }
+    100% {
+        transform: rotate(30deg) scale(110%,110%);
+    }
+    
+}
+
 .demo-color-toggle > span {
     display: -ms-flexbox;
     display: flex;

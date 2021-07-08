@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  background-color: #f0efef;
+  background-color: var(--footer-background);
 }
 .footer__content-top {
   margin: 30px auto;
@@ -9,12 +9,12 @@
   padding: 20px 0;
 }
 .footer-block__heading {
-  color: white;
+  color: var(--footer-heading__fields);
   font-size: 4rem;
   line-height: 10px;
   margin-top: 0.5em;
   font-weight: 700;
-  text-shadow: 4px 2px lightgrey;
+  text-shadow: 4px 2px var(--footer-light-text-tshadow);
 }
 .footer-contact__fields {
   display: flex;
@@ -25,27 +25,31 @@
   width: 49%;
 }
 .footer .field {
-  background: white;
+  background: var(--footer-heading__fields);
   border-radius: 12px;
 }
 .footer .field label {
-  color: darkgrey;
+  color: var(--footer-labels);
   text-transform: lowercase;
 }
 .footer .field input, .footer .field textarea {
-  color: #969696;
+  color: var(--footer-text);
 }
 .footer .contact__button {
-  padding: min(5%, 30px) 0;
+  margin: min(5%, 30px) 0;
+  cursor: pointer;
 }
 .footer .contact__button button {
-  background: var(--logo-color);
+  background: var(--accent-color);
   text-transform: lowercase;
   font-size: 2rem;
-  color: white;
+  color: var(--footer-heading__fields);
   font-weight: 700;
   border-radius: 12px;
   width: 100%;
+}
+.footer .contact__button button:hover {
+  background: var(--accent-color-hover);
 }
 .footer .form__message {
   align-items: center;
@@ -60,18 +64,18 @@
 }
 .footer__content-bottom {
   display: flex;
-  background-color: white;
+  background-color: var(--body-background);
 }
 .footer__content-bottom-wrapper {
   margin: 10px auto;
 }
 .footer__copyright {
   font-size: 1.2rem;
-  color: darkgray;
+  color: var(--footer-copy-text);
 }
 .footer__copyright .copyright__content a {
   text-decoration: none;
-  color: darkgray;
+  color: var(--footer-copy-text);
 }
 
 /*# sourceMappingURL=section-footer.css.map */

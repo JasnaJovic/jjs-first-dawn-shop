@@ -1,7 +1,7 @@
 .footer {
     //margin: 0 auto;
     width: 100%;
-    background-color: rgb(240, 239, 239);
+    background-color: var(--footer-background);
     
     // footer styles - small contact form
     &__content-top {
@@ -12,12 +12,12 @@
         padding: 20px 0;
         }
         &__heading {
-            color: white;
+            color: var(--footer-heading__fields);
             font-size: 4rem;
             line-height: 10px;
             margin-top: 0.5em;
             font-weight: 700;
-            text-shadow: 4px 2px lightgrey;
+            text-shadow: 4px 2px var(--footer-light-text-tshadow);
         }
     }
     &-contact__fields {
@@ -31,29 +31,32 @@
     }
 
     .field {
-        background: white;
+        background: var(--footer-heading__fields);
         border-radius: 12px;
 
         label {
-            color: darkgrey;
+            color: var(--footer-labels);
             text-transform: lowercase;
         }
         input, textarea {
-            color: rgb(150, 150, 150);
+            color: var(--footer-text);
         }
     }
     .contact__button {
-        padding: min(5%,30px) 0;
-        
+        margin: min(5%,30px) 0;
+        cursor: pointer;
 
         button {
-           background: var(--logo-color);
+           background: var(--accent-color);
            text-transform: lowercase;
            font-size: 2rem; 
-           color: white;
+           color: var(--footer-heading__fields);
            font-weight: 700;
            border-radius: 12px;
            width: 100%;
+           &:hover {
+            background: var(--accent-color-hover);
+           }
         }
     }
 
@@ -75,18 +78,18 @@
     //copyright styles
     &__content-bottom {
         display: flex;
-        background-color: white;
+        background-color: var(--body-background);
             &-wrapper {
                 margin: 10px auto;
             }        
     }
     &__copyright {
         font-size: 1.2rem;
-        color: darkgray;
+        color: var(--footer-copy-text);
 
         .copyright__content a {
             text-decoration: none;
-            color: darkgray;
+            color: var(--footer-copy-text);
         }
     }
 

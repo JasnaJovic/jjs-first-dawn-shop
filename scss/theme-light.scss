@@ -1,12 +1,17 @@
 :root {
-    --logo-color: rgb(1, 85, 85);
+    --body-background: rgb(247, 245, 245);
+    --header-accent-color: rgb(3, 3, 39);
+    // footer colors
+    --accent-color: rgb(25, 25, 66);
+    --accent-color-hover: rgb(11, 11, 54);
+    --footer-background: rgb(231, 230, 230);
+    --footer-heading__fields: white;
+    --footer-light-text-tshadow:lightgrey;
+    --footer-text: rgb(150, 150, 150);
+    --footer-labels: darkgrey;
 }
 
-.demo-color-toggle:hover {
-    background-color: #f5f5f5 !important;
+body{
+    background: var(--body-background);
 }
 
-body.light-mode{
-    background-color: #fff;
-    color: #000;
-}

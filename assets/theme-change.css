@@ -1,25 +1,24 @@
 .demo-color-toggle {
   z-index: 165;
   display: -ms-flexbox;
-  justify-self: flex-start;
+  display: inline-block;
+  justify-content: center;
   align-items: center;
   width: fit-content;
-  margin-left: -1.8rem;
 }
-.git-icon {
-  margin-right: -1.2rem;
+
+.demo-color-toggle:hover svg {
+  animation: rotateScaleSVG 0.5s alternate infinite linear;
 }
-@media (min-width: 990px) {
-  .demo-color-toggle {
-    justify-self: flex-end;
+
+@keyframes rotateScaleSVG {
+  0% {
+    transform: rotate(0deg) scale(100%, 100%);
   }
-  .git-icon {
-    margin: 0;
+  100% {
+    transform: rotate(30deg) scale(110%, 110%);
   }
 }
-
-
-
 .demo-color-toggle > span {
   display: -ms-flexbox;
   display: flex;
