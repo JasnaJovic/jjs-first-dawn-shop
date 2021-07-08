@@ -1,11 +1,20 @@
 .footer {
+  width: 100%;
   background-color: #f0efef;
 }
 .footer__content-top {
-  margin: 30px 0;
+  margin: 30px auto;
 }
 .footer-block__contact_form {
   padding: 20px 0;
+}
+.footer-block__heading {
+  color: white;
+  font-size: 4rem;
+  line-height: 10px;
+  margin-top: 0.5em;
+  font-weight: 700;
+  text-shadow: 4px 2px lightgrey;
 }
 .footer-contact__fields {
   display: flex;
@@ -20,8 +29,11 @@
   border-radius: 12px;
 }
 .footer .field label {
-  color: darkgray;
+  color: darkgrey;
   text-transform: lowercase;
+}
+.footer .field input, .footer .field textarea {
+  color: #969696;
 }
 .footer .contact__button {
   padding: min(5%, 30px) 0;
@@ -37,6 +49,10 @@
 }
 .footer__content-bottom {
   display: flex;
+  background-color: white;
+}
+.footer__content-bottom-wrapper {
+  margin: 10px auto;
 }
 .footer__copyright {
   font-size: 1.2rem;
