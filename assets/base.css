@@ -1042,7 +1042,7 @@ input[type='checkbox'] {
   align-self: start;
 }
 
-.form-status {
+/* .form-status {
   margin: 0;
   font-size: 1.6rem;
 }
@@ -1054,7 +1054,7 @@ input[type='checkbox'] {
 
 .form-status-list li {
   list-style-position: inside;
-}
+} */
 
 .form-status-list .link::first-letter {
   text-transform: capitalize;

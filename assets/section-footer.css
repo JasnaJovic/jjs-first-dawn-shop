@@ -47,6 +47,17 @@
   border-radius: 12px;
   width: 100%;
 }
+.footer .form__message {
+  align-items: center;
+  display: flex;
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-top: 1rem;
+}
+.footer .form-status-list {
+  padding: 0;
+  margin: 2rem 0 2rem;
+}
 .footer__content-bottom {
   display: flex;
   background-color: white;
