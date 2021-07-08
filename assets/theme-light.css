@@ -1,5 +1,6 @@
 :root {
-  --body-background: rgb(247, 245, 245);
+  --body-background: rgb(230, 230, 230);
+  --header-background-color-70: rgba(230, 230, 230, 0.7);
   --header-accent-color: rgb(3, 3, 39);
   --menu-drawer-background: rgb(247, 245, 245);
   --menu-drawer-cell-background: rgb(226, 225, 225);
@@ -15,7 +16,8 @@
 }
 
 body {
-  background: var(--body-background);
+  background: url("/assets/pattern-tile-light.svg"), var(--body-background);
+  z-index: 5;
 }
 
 /*# sourceMappingURL=theme-light.css.map */

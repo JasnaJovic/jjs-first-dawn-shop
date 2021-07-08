@@ -1,8 +1,9 @@
 :root {
   --body-background: rgb(39, 39, 39);
+  --header-background-color-70: rgba(39, 39, 39, 0.7);
   --header-accent-color: rgb(230, 230, 230);
   --menu-drawer-background: rgb(39, 39, 39);
-  --menu-drawer-cell-background: rgb(61, 61, 61);
+  --menu-drawer-cell-background: rgb(39, 39, 39);
   --accent-color: rgb(236, 236, 243);
   --accent-color-hover: rgb(255, 255, 255);
   --footer-background: rgb(66, 66, 66);
@@ -15,7 +16,7 @@
 }
 
 body.dark-mode {
-  background-color: var(--body-background);
+  background: url("/assets/pattern-tile-dark.svg"), var(--body-background);
 }
 
 /*# sourceMappingURL=theme-dark.css.map */

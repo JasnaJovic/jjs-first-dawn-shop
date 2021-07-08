@@ -22,7 +22,7 @@
 .header-wrapper {
   display: block;
   position: relative;
-  background-color: var(--color-background);
+  background: var(--header-background-color-70);
 }
 
 .header {
