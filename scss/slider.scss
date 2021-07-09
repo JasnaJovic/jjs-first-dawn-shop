@@ -7,3 +7,21 @@
     position: relative;
     height: min( calc(100vh - 65px), 500px);
 }
+.swiper-container-horizontal>.swiper-pagination-progressbar,
+.swiper-container-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+    height: 5px;
+    bottom: 0;
+    top: auto;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: var(--accent-color-hover);
+}
+
+.swiper-pagination-progressbar {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.swiper-container-horizontal>.swiper-scrollbar {
+    bottom: 0;
+    height: 5px;
+}
