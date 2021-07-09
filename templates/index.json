@@ -6,47 +6,61 @@
         "image_slide_1": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Photo_by_Fujifilm_North_America_from_Pexels_2.jpg",
             "button__label1": "Button label",
-            "button_url_1": "",
-            "button__label2": "Button label",
-            "button_url_2": ""
+            "button_url_1": "shopify:\/\/pages\/contact",
+            "button__label2": "Button label git",
+            "button_url_2": "https:\/\/github.com\/JasnaJovic"
           }
         },
         "image_slide_2": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Photo_by_Free_Creative_Stuff_from_Pexels.jpg",
             "button__label1": "Button label",
-            "button_url_1": "",
+            "button_url_1": "shopify:\/\/pages\/contact",
             "button__label2": "Button label",
-            "button_url_2": ""
+            "button_url_2": "https:\/\/github.com\/JasnaJovic"
           }
         },
-        "product_slide": {
+        "39b6b888-396f-462c-8a79-f4fe6b25fd99": {
           "type": "featured-product",
           "settings": {
-            "product": "",
+            "product": "ffff",
             "use_product_image": true,
             "button_1": "Button label",
-            "button_link1": "",
+            "button_link1": "shopify:\/\/products\/ffff",
             "button_2": "Button label",
-            "button_link2": ""
+            "button_link2": "https:\/\/github.com\/JasnaJovic"
           }
         },
         "image_slide_3": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Photo_by_Alex_Andrews_from_Pexels.jpg",
             "button__label1": "Button label",
-            "button_url_1": "",
+            "button_url_1": "shopify:\/\/pages\/contact",
             "button__label2": "Button label",
-            "button_url_2": ""
+            "button_url_2": "https:\/\/github.com\/JasnaJovic"
+          }
+        },
+        "92cd3e77-5ee0-4fc0-a463-056bee6a0459": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Photo_by_Fujifilm_North_America_from_Pexels.jpg",
+            "button__label1": "Button label",
+            "button_url_1": "shopify:\/\/blogs\/news",
+            "button__label2": "Button label",
+            "button_url_2": "https:\/\/github.com\/JasnaJovic"
           }
         }
       },
       "block_order": [
         "image_slide_1",
         "image_slide_2",
-        "product_slide_1",
-        "image_slide_3"
+        "39b6b888-396f-462c-8a79-f4fe6b25fd99",
+        "image_slide_3",
+        "92cd3e77-5ee0-4fc0-a463-056bee6a0459"
       ],
       "settings": {
       }

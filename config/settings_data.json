@@ -5,7 +5,6 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo_width": 100,
           "logo_position": "middle-center",
           "menu": "main-menu",
           "github_link": "",
