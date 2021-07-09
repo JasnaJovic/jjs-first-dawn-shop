@@ -1,0 +1,12 @@
+.slider-width {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.swiper-wrapper {
+  position: relative;
+  height: min(calc(100vh - 65px), 500px);
+}
+
+/*# sourceMappingURL=slider.css.map */

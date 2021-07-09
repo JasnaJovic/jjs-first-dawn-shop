@@ -1,26 +1,17 @@
-{{ 'flickity-slider.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+{{ 'slider.css' | asset_url | stylesheet_tag }}
 <div id="FeaturedSlider-{{ section.id }}" class="banner">
-  <div class="main-carousel">
-
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
     {% for block in section.blocks %}
       {% if block.type == 'image' %}
      
-      <div class="carousel-cell">
-        {% if block.settings.image != blank %}
-          <img srcset="{%- if block.settings.image.width >= 375 -%}{{ block.settings.image | img_url: '375x' }} 375w,{%- endif -%}
-          {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | img_url: '750x' }} 750w,{%- endif -%}
-          {%- if block.settings.image.width >= 1100 -%}{{ block.settings.image | img_url: '1100x' }} 1100w,{%- endif -%}
-          {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
-          {%- if block.settings.image.width >= 1780 -%}{{ block.settings.image | img_url: '1780x' }} 1780w,{%- endif -%}
-          {%- if block.settings.image.width >= 2000 -%}{{ block.settings.image | img_url: '2000x' }} 2000w,{%- endif -%}
-          {%- if block.settings.image.width >= 2800 -%}{{ block.settings.image | img_url: '2800x' }} 2800w{%- endif -%}"
-          sizes="100vw"
-          src="{{ block.settings.image | img_url: '750x' }}"
-          loading="lazy"
-          alt="{{ block.settings.image.alt | escape }}"
-          width="{{ block.settings.image.width }}"
-          class="featured-slider-media">
-        {% endif %}
+      {% if block.settings.image != blank %}
+      <div class="swiper-slide"
+      style="background: url({{ block.settings.image | img_url: 'master' }});
+             background-position: center;
+             background-size: cover">
+      
         {% if block.settings.button_url_1 != blank %}
         <div class="featured-slide-button button--first">
             <a href="{{ block.settings.button_url_1 }}">
@@ -35,35 +26,23 @@
             </a> 
           </div>
         {% endif %}
-
+       
       </div>
+      {% endif %}
 
 
 
       {% else %}
         {% assign product = all_products[block.settings.product] %}
-        {% if use_product_image %}
-        {% assign slide_image = product.featured_image %}
+        {% if block.settings.use_product_image %}
+          {% assign slide_image = product.featured_image %}
         {% else %}
-        {% assign slide_image = block.settings.image2 %}
+          {% assign slide_image = block.settings.image2 %}
         {% endif %}
-        <div class="carousel-cell">
-        
-          {% if block.settings.image2 != blank or product.featured_image != blank %}
-            <img srcset="{%- if slide_image.width >= 375 -%}{{ slide_image | img_url: '375x' }} 375w,{%- endif -%}
-            {%- if slide_image.width >= 750 -%}{{ slide_image | img_url: '750x' }} 750w,{%- endif -%}
-            {%- if slide_image.width >= 1100 -%}{{ slide_image | img_url: '1100x' }} 1100w,{%- endif -%}
-            {%- if slide_image.width >= 1500 -%}{{ slide_image | img_url: '1500x' }} 1500w,{%- endif -%}
-            {%- if slide_image.width >= 1780 -%}{{ slide_image | img_url: '1780x' }} 1780w,{%- endif -%}
-            {%- if slide_image.width >= 2000 -%}{{ slide_image | img_url: '2000x' }} 2000w,{%- endif -%}
-            {%- if slide_image.width >= 2800 -%}{{ slide_image | img_url: '2800x' }} 2800w{%- endif -%}"
-            sizes="100vw"
-            src="{{ slide_image | img_url: '750x' }}"
-            loading="lazy"
-            alt="{{ slide_image.alt | escape }}"
-            width="{{ slide_image.width }}"
-            class="featured-slider-media">
-          {% endif %}
+        {% if block.settings.image2 != blank or product.featured_image != blank %}
+        <div class="swiper-slide"
+          style="background: url({{ slide_image | img_url: 'master' }});">
+          
           {% if block.settings.button_link1 != blank %}
           <div class="featured-slide-button button--first">
               <a href="{{ block.settings.button_link1 }}">
@@ -80,21 +59,47 @@
           {% endif %}
 
         </div>
+        {% endif %}
         
       {% endif %}
     {% endfor %}
+  </div>
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
 
   </div>  
 </div>
 
+<script type="module">
+  import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
 
-<script>
-  var flkty = new Flickity( '.main-carousel', {
-    draggable: true,
-    autoPlay: 2000,
-    pauseAutoPlayOnHover: true,
-    lazyLoad: true
-  });
+  const swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
 </script>
 
 
@@ -102,7 +107,7 @@
 {
   "name": "Featured Slider",
   "tag": "section",
-  "class": "spaced-section spaced-section--full-width",
+  "class": "spaced-section spaced-section--full-width slider-width",
   "blocks": [
   {
     "type": "image",
