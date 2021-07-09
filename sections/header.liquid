@@ -15,8 +15,8 @@
     scrollbar-width: none;  /* Firefox */
   }
   header-drawer {
-    justify-self: start;
-    margin-left: -1.2rem;
+    justify-self: center;
+    margin-left: 0;
   }
 
   @media screen and (min-width: 990px) {
@@ -95,6 +95,11 @@
           <div id="menu-drawer" class="menu-drawer motion-reduce" tabindex="-1">
             <div class="menu-drawer__inner-container">
               <div class="menu-drawer__navigation-container">
+                <h1 style="display: block;">
+                  <a href="{{ routes.root_url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset menu-drawer__menu-item">
+                      {% render 'logo' %}
+                  </a>
+                </h1>
                 <nav class="menu-drawer__navigation">
                   <ul class="menu-drawer__menu list-menu" role="list">
                     {%- for link in section.settings.menu.links -%}

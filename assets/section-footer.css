@@ -1,4 +1,5 @@
 .footer {
+  margin-bottom: 64px;
   width: 100%;
 }
 .footer__content-top {
@@ -83,6 +84,9 @@
 }
 
 @media (min-width: 990px) {
+  .footer {
+    margin-bottom: 0;
+  }
   .footer-block__contact_form {
     display: flex;
     justify-content: space-between;

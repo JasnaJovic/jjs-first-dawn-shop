@@ -43,6 +43,26 @@
   }
 }
 @media (max-width: 990px) {
+  @keyframes rotateScaleSVG {
+    0% {
+      transform: rotate(0deg) scale(100%, 100%);
+    }
+    50% {
+      transform: rotate(30deg) scale(110%, 110%);
+    }
+    100% {
+      transform: rotate(0deg) scale(100%, 100%);
+    }
+  }
+  .demo-color-toggle:hover svg {
+    animation: rotateScaleSVG 1.5s linear;
+  }
+
+  .demo-color-toggle > span {
+    width: 6rem;
+    height: 6rem;
+  }
+
   .desktop {
     display: none;
   }
