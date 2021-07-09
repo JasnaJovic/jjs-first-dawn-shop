@@ -1,3 +1,4 @@
+{{ 'flickity-slider.css' | asset_url | stylesheet_tag }}
 <div id="FeaturedSlider-{{ section.id }}" class="banner">
   <div class="main-carousel">
 
@@ -42,13 +43,13 @@
       {% else %}
         {% assign product = all_products[block.settings.product] %}
         {% if use_product_image %}
-        {% assign slide_image = product.featured_media %}
+        {% assign slide_image = product.featured_image %}
         {% else %}
         {% assign slide_image = block.settings.image2 %}
         {% endif %}
         <div class="carousel-cell">
         
-          {% if block.settings.image2 != blank or product.featured_image == blank %}
+          {% if block.settings.image2 != blank or product.featured_image != blank %}
             <img srcset="{%- if slide_image.width >= 375 -%}{{ slide_image | img_url: '375x' }} 375w,{%- endif -%}
             {%- if slide_image.width >= 750 -%}{{ slide_image | img_url: '750x' }} 750w,{%- endif -%}
             {%- if slide_image.width >= 1100 -%}{{ slide_image | img_url: '1100x' }} 1100w,{%- endif -%}
