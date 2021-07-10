@@ -26,10 +26,10 @@
         "39b6b888-396f-462c-8a79-f4fe6b25fd99": {
           "type": "featured-product",
           "settings": {
-            "product": "ffff",
+            "product": "single-awesome-product",
             "use_product_image": true,
             "button_1": "Button label",
-            "button_link1": "shopify:\/\/products\/ffff",
+            "button_link1": "shopify:\/\/products\/single-awesome-product",
             "button_2": "Button label",
             "button_link2": "https:\/\/github.com\/JasnaJovic"
           }
