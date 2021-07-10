@@ -17,7 +17,7 @@
 }
 
 body {
-  background: url("/assets/pattern-tile-light.svg"), var(--body-background);
+  background: url("https://cdn.shopify.com/s/files/1/0582/6805/7773/t/14/assets/pattern-tile-light.svg?v=1625774718"), var(--body-background);
 }
 
 /*# sourceMappingURL=theme-light.css.map */

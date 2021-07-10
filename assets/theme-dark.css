@@ -17,7 +17,7 @@
 }
 
 body.dark-mode {
-  background: url("/assets/pattern-tile-dark.svg"), var(--body-background);
+  background: url("https://cdn.shopify.com/s/files/1/0582/6805/7773/t/14/assets/pattern-tile-dark.svg?v=1625774717"), var(--body-background);
 }
 
 /*# sourceMappingURL=theme-dark.css.map */
