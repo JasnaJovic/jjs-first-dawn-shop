@@ -6,7 +6,7 @@
         "image_slide_1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Photo_by_Fujifilm_North_America_from_Pexels_2.jpg",
+            "image": "shopify:\/\/shop_images\/Photo_by_Alex_Andrews_from_Pexels.jpg",
             "button__label1": "Button label",
             "button_url_1": "shopify:\/\/pages\/contact",
             "button__label2": "Button label git",
@@ -37,7 +37,7 @@
         "image_slide_3": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Photo_by_Alex_Andrews_from_Pexels.jpg",
+            "image": "shopify:\/\/shop_images\/Photo_by_Fujifilm_North_America_from_Pexels_2.jpg",
             "button__label1": "Button label",
             "button_url_1": "shopify:\/\/pages\/contact",
             "button__label2": "Button label",
