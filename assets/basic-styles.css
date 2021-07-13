@@ -1,5 +1,12 @@
 * {
   font-family: "DM Sans", sans-serif;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+*::-webkit-scrollbar {
+  display: none;
 }
 
 /*# sourceMappingURL=basic-styles.css.map */

@@ -36,7 +36,7 @@
   .header {
     display: grid;
     grid-template-areas: 'left-icon moon icons';
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: auto;
     align-items: center;
     background-color: var(--color-background);
     padding-top: 1rem;
@@ -208,6 +208,24 @@
   }
   
   @media screen and (max-width: 989px) {
+
+    .header__icons {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+    }
+    #cart-icon-bubble {
+      height: 6rem;
+      width: 6rem;
+    }
+    #cart-icon-bubble svg {
+      height: 8rem;
+      width: 8rem;
+    }
+
+    #shopify-section-header > div > header > a {
+      display: none
+    }
     .menu-drawer__menu-item {
       font-size: 4rem;
     }
@@ -263,6 +281,10 @@
     max-height: 40px;
   }
   @media screen and (min-width: 990px) {
+
+    #shopify-section-header > div > header > div.header__icons > a.header__icon.header__icon--cart.link.link--text.focus-inset.git-icon > svg {
+      width: 2.7rem;
+    }
 
     .logo--snippet {
       max-height: 30px;
@@ -423,3 +445,6 @@
   justify-content: space-between;
 }
 
+.menu-drawer__navigation {
+  padding: 0 0 5.6rem;
+}
