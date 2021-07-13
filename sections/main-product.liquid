@@ -20,7 +20,7 @@
 {% assign product = all_products[section.settings.j-product] %}
 <div class="mygrid">
   <div class="mygrid__item mygrid__item--left">
-    <div class="swiper-container">
+    <div class="swiperProd-container">
 
       <div class="swiper-wrapper">
         {% for image in product.images %}
@@ -32,10 +32,10 @@
         {% endfor %}
       </div>
 
-      <div class="swiper-pagination"></div>
+      <div class="swiperProd-pagination"></div>
 
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="swiperProd-button-prev"></div>
+      <div class="swiperProd-button-next"></div>
 
 
     </div>
