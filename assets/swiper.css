@@ -6,7 +6,8 @@
   height: 100%;
 }
 .swiperProd-container .swiper-slide__img {
-  width: 100%;
+  width: auto;
+  height: 100%;
 }
 .swiperProd-container .swiper-pagination-bullet-active {
   background: white !important;
