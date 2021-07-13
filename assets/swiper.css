@@ -1,5 +1,7 @@
 .swiperProd-container * {
   cursor: none !important;
+}
+.swiperProd-container {
   overflow: hidden;
 }
 .swiperProd-container .swiper-slide__img {
