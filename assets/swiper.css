@@ -3,6 +3,7 @@
 }*/
 .swiperProd-container {
   overflow: hidden;
+  height: 100%;
 }
 .swiperProd-container .swiper-slide__img {
   width: 100%;
