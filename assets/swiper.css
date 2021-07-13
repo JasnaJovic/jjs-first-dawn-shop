@@ -20,7 +20,6 @@
 }
 .swiperProd-container .swiperProd-button-prev {
   left: 40px;
-  display: none;
 }
 .swiperProd-container .swiperProd-button-prev::after {
   position: absolute;
@@ -36,7 +35,6 @@
 }
 .swiperProd-container .swiperProd-button-next {
   right: 40px;
-  display: none;
 }
 .swiperProd-container .swiperProd-button-next::after {
   position: absolute;
