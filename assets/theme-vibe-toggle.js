@@ -14,7 +14,7 @@
 		darkThemeIcon.style.display = 'none';
 		// 1. add class dark-mode to body
 		document.body.classList.add('dark-mode');
-		$('head').append('<link href="https://cdn.shopify.com/s/files/1/0582/6805/7773/t/13/assets/theme-dark.css?v=12981626911124337130" rel="stylesheet" type="text/css" media="all">');	
+		$('head').append('<link href="https://cdn.shopify.com/s/files/1/0581/9757/3798/t/2/assets/theme-dark.css?v=3323031686809762681" rel="stylesheet" type="text/css" media="all">');	
 		setTimeout(function () {
 		$('head link[href*="-light"]').remove();
 		}, 150)
@@ -31,7 +31,7 @@
 		darkThemeIcon.style.display = 'flex';
 		// 1. add class dark-mode to body
 		document.body.classList.remove('dark-mode');
-		$('head').append('<link href="https://cdn.shopify.com/s/files/1/0582/6805/7773/t/14/assets/theme-light.css?v=4701719167238274054" rel="stylesheet" type="text/css" media="all">');
+		$('head').append('<link href="https://cdn.shopify.com/s/files/1/0581/9757/3798/t/2/assets/theme-light.css?v=15092575284098325709" rel="stylesheet" type="text/css" media="all">');
 		setTimeout(function () {
 			$('head link[href*="-dark"]').remove();
 		}, 150)
