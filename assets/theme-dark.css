@@ -14,6 +14,10 @@
   --footer-labels: rgb(231, 231, 231);
   --footer-copy-background:rgb(66, 66, 66);
   --footer-copy-text:rgb(230, 230, 230);
+  --slide-overlay: rgb(66, 66, 66);
+  --first-background: rgba(39, 39, 39, 0.92);
+  --second-background: rgb(0, 201, 174);
+  --button-copy: rgb(255, 255, 255);
 }
 
 body.dark-mode {

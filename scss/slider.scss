@@ -26,3 +26,51 @@
     height: 5px;
 }
 
+// slider buttons
+
+.swiper-slide {
+    display: flex;
+    //flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.featured-slide-button {
+    padding: 1.8rem 5rem;
+    margin: 8rem 4rem;
+    border-radius: 10px;
+
+    a {
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: lowercase;
+    }
+
+    &.button--first {
+        background: var(--first-background);
+        
+        a {
+            color: var(--button-copy);
+        }
+    }
+
+    &.button--second {
+        background: var(--second-background);
+        a {
+            color: white;
+        }
+    }
+}
+
+@media (max-width: 989px) {
+    .swiper-slide {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .featured-slide-button {
+        margin: 4rem;
+    }
+    
+}

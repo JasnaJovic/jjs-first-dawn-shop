@@ -15,7 +15,13 @@
     --footer-labels: darkgrey;
     --footer-copy-background:rgb(231, 230, 230);
     --footer-copy-text:rgb(3, 3, 39);
+    // slider, slider buttons
+    --slide-overlay: lightgrey;
+    --first-background: rgba(255, 255, 255, 0.92);
+    --second-background: rgb(6, 6, 95);
+    --button-copy: rgba(39, 39, 39, 0.92);
 } 
+
 
 body{ 
      background: url('https://cdn.shopify.com/s/files/1/0582/6805/7773/t/14/assets/pattern-tile-light.svg?v=1625774718'), var(--body-background);
