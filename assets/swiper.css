@@ -1,6 +1,6 @@
-.swiperProd-container * {
+/*.swiperProd-container * {
   cursor: none !important;
-}
+}*/
 .swiperProd-container {
   overflow: hidden;
 }
