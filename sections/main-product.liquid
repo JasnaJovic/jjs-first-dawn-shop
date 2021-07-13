@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 {% comment %}theme-check-disable TemplateLength{% endcomment %}
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
 {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
@@ -448,6 +450,32 @@
   customElements.define('product-modal', ProductModal);
 {% endjavascript %}
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<script type="module">
+  import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+
+  const swiperProd = new Swiper('.swiperProd-container', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiperProd-pagination',
+    type: "progressbar",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiperProd-button-next',
+    prevEl: '.swiperProd-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiperProd-scrollbar',
+  },
+});
+</script>
 
 {%- if first_3d_model -%}
   <script type="application/json" id="ProductJSON-{{ product.id }}">
