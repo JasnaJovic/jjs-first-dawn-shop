@@ -1,5 +1,6 @@
 .swiperProd-container * {
   cursor: none !important;
+  overflow: hidden;
 }
 .swiperProd-container .swiper-slide__img {
   width: 100%;
